@@ -44,6 +44,122 @@
     <section class="form">
       <h2 class="form__title">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
         достопримечательностях</h2>
+      <form class="form__section feedback" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="feedback__item">
+          <legend class="feedback__title">
+            Представьтесь:
+          </legend>
+          <ul class="feedback__list present">
+            <li class="present__item">
+              <label class="present__title" for="firstname">
+                Имя*:
+              </label>
+              <input class="present__input" type="text" name="firstname" id="firstname" placeholder="Петр" required>
+            </li>
+            <li class="present__item">
+              <label class="present__title" for="surname">
+                Фамилия*:
+              </label>
+              <input class="present__input" type="text" name="surname" id="surname" placeholder="Иванов">
+            </li>
+            <li class="present__item">
+              <label class="present__title" for="patronymic">
+                Отчество:
+              </label>
+              <input class="present__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="feedback__item">
+          <legend class="feedback__title">
+            Контактная информация:
+          </legend>
+          <ul class="feedback__list contacts">
+            <li class="contacts__item">
+              <label class="contacts__title" for="phone">
+                Контактный телефон*:
+              </label>
+              <input class="contacts__input" type="tel" name="phone" id="phone" placeholder="Введите телефон">
+            </li>
+            <li class="contacts__item">
+              <label class="contacts__title" for="email">
+                Электронная почта*:
+              </label>
+              <input class="contacts__input" type="email" name="email" id="email" placeholder="Введите e-mail">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="feedback__item">
+          <legend class="feedback__title">
+            Ваше общее впечатление:
+          </legend>
+          <ul class="feedback__list impression">
+            <li class="impression__item">
+              <input class="impression__input" type="radio" name="positive" id="positive" checked>
+              <label class="timpression__title" for="positive">
+                Скорее положительное
+              </label>
+            </li>
+            <li class="impression__item">
+              <input class="impression__input" type="radio" name="negative" id="negative">
+              <label class="impression__title" for="negative">
+                Скорее отрицательное
+              </label>
+            </li>
+            <li class="impression__item">
+              <input class="impression__input" type="radio" name="difficult" id="difficult">
+              <label class="impression__title" for="difficult">
+                Затрудняюсь ответить
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="feedback__item">
+          <legend class="feedback__title">
+            Посещенные достопримечательности:
+          </legend>
+          <ul class="feedback__list landmarks">
+            <li class="landmarks__item">
+                <input class="landmarks__input" type="checkbox" name="check1" id="check1" checked>
+                <label class="landmarks__title" for="check1">
+                  Мост Дьявола
+                </label>
+            </li>
+            <li class="landmarks__item">
+                <input class="landmarks__input" type="checkbox" name="check2" id="check2" checked>
+                <label class="landmarks__title" for="check2">
+                  Слайд-парк
+                </label>
+            </li>
+            <li class="landmarks__item">
+                <input class="landmarks__input" type="checkbox" name="check3" id="check3">
+                <label class="landmarks__title" for="check3">
+                  Гора-Колокол
+                </label>
+            </li>
+            <li class="landmarks__item">
+                <input class="landmarks__input" type="checkbox" name="check4" id="check4" checked>
+                <label class="landmarks__title" for="check4">
+                  Красные скалы
+                </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="feedback__item">
+          <legend class="feedback__title">
+            Опишите свои эмоции:
+          </legend>
+          <textarea class="feedback__description" name="description"
+            placeholder="Опишите подробно все свои восторги"></textarea>
+        </fieldset>
+        <fieldset class="feedback__item">
+          <legend class="visually-hidden">
+            Отправка отзыва:
+          </legend>
+          <button class="feedback__send-btn" type="submit">Отправить отзыв</button>
+          <span class="feedback__send-notice">* &mdash; обязательные поля</span>
+        </fieldset>
+      </form>
     </section>
   </main>
 
@@ -62,9 +178,9 @@
         </li>
       </ul>
     </div>
-    <div class="page-footer__copyright footer-copyrght">
-      <p class="footer-copyrght__text">Разработано</p>
-      <a class="footer-copyrght__link" aria-label="htmlacademy.ru" href="https://htmlacademy.ru">htmlacademy.ru</a>
+    <div class="page-footer__copyright developed">
+      <p class="developed__text">Разработано</p>
+      <a class="developed__link" aria-label="htmlacademy.ru" href="https://htmlacademy.ru">htmlacademy.ru</a>
     </div>
   </footer>
 
