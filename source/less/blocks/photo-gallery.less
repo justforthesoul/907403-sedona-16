@@ -1,0 +1,38 @@
+.photo-gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+.photo-gallery__item {
+  padding-top: 24px;
+  width: 320px;
+  border-top: 1px solid rgb(229, 229, 229);
+  text-align: center;
+}
+
+.photo-gallery__item:last-child {
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
+.photo-gallery__content {
+  margin: 0;
+  padding: 0;
+}
+
+.photo-gallery__text {
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.photo-gallery__header {
+  text-transform: @uppercase;
+}
+
+.photo-gallery__likes-number {
+  font-weight: bold;
+}
