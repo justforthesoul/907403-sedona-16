@@ -11,6 +11,27 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  body {
+    min-width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  html {
+    background-color: rgb(242, 242, 242);
+  }
+
+  body {
+    min-width: 1200px;
+    margin-left: 40px;
+    margin-right: 40px;
+    box-shadow: 0 0 30px rgb(180, 180, 180);
+    background-color: rgb(255, 255, 255);
+  }
 }

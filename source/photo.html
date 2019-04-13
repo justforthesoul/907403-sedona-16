@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -9,7 +10,7 @@
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <button class="toggler-close" type="button" aria-label="Закрыть меню"></button>
+        <button class="toggler toggler--close" type="button" aria-label="Закрыть меню"></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -31,7 +32,7 @@
           </ul>
         </div>
       </nav>
-      <button class="toggler-open" type="button" aria-label="Открыть меню"></button>
+      <button class="toggler toggler--open" type="button" aria-label="Открыть меню"></button>
       <a class="page-header__logo" href="#">
         <img
           class="page-header__logo-image"
@@ -43,7 +44,7 @@
       </a>
       <div class="page-header__image-minor">
         <img
-          class="page-header__image"
+          class="page-header__picture-minor"
           src="img/text-sedona.svg"
           alt="Главное фото"
           width="230"
@@ -54,12 +55,12 @@
 
     <main class="page-gallery">
       <h1 class="page-gallery__title">Фото и видео</h1>
-      <section class="photo">
-        <h2 class="photo__title">
+      <section class="photo-gallery">
+        <h2 class="photo-gallery__title">
           Не можете решиться на путешествие из-за курса? Фотографии помогут вам
           забыть о политике и экономике.
         </h2>
-        <ul class="photo__list photo-gallery">
+        <ul class="photo-gallery__list">
           <li class="photo-gallery__item">
             <figure class="photo-gallery__content">
               <img
@@ -154,36 +155,36 @@
 
     <footer class="footer">
       <p class="footer__hashtag">#visitsedona</p>
-      <ul class="footer__list social-list">
-        <li class="social-list__item">
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
           <a
-            class="social-list__link-t"
+            class="footer__link footer__link--twitter"
             href="#"
             aria-label="Твитер"
             href="#"
           ></a>
         </li>
-        <li class="social-list__item">
+        <li class="footer__social-item">
           <a
-            class="social-list__link-f"
+            class="footer__link footer__link--facebook"
             href="#"
             aria-label="Фэйсбук"
             href="#"
           ></a>
         </li>
-        <li class="social-list__item">
+        <li class="footer__social-item">
           <a
-            class="social-list__link-y"
+            class="footer__link footer__link--youtube"
             href="#"
             aria-label="Ютуб"
             href="#"
           ></a>
         </li>
       </ul>
-      <div class="footer__item developed">
-        <p class="developed__text">Разработано</p>
+      <div class="footer__developed">
+        <p class="footer__developed-text">Разработано</p>
         <a
-          class="developed__link"
+          class="footer__developed-link"
           aria-label="htmlacademy.ru"
           href="https://htmlacademy.ru/intensive/adaptive"
         ></a>
