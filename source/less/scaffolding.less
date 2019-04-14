@@ -9,6 +9,11 @@
   overflow: hidden;
 }
 
+.content-wraper {
+  min-width: 320px;
+  margin: 0 auto;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   min-width: 320px;
@@ -20,17 +25,20 @@ body {
   body {
     min-width: 768px;
   }
+
+  .content-wraper {
+    min-width: 768px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  html {
+  body {
+    min-width: 1280px;
     background-color: rgb(242, 242, 242);
   }
 
-  body {
-    min-width: 1200px;
-    margin-left: 40px;
-    margin-right: 40px;
+  .content-wraper {
+    width: 1200px;
     box-shadow: 0 0 30px rgb(180, 180, 180);
     background-color: rgb(255, 255, 255);
   }
