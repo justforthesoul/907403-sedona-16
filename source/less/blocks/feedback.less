@@ -5,6 +5,8 @@
 
 .feedback__item {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .feedback__title {
@@ -12,13 +14,11 @@
   font-size: 18px;
   line-height: 26px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .feedback__list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
+  .list-reset;
   display: flex;
   flex-flow: column;
 }
@@ -28,6 +28,7 @@
   justify-content: space-between;
   padding-top: 20px;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .feedback__present-title,
@@ -37,39 +38,44 @@
   line-height: 26px;
 }
 
-.feedback__present-input,
+.feedback__contacts-title {
+  padding-left: 20px;
+}
+
 .feedback__contacts-input {
   background-color: @input-color;
   border: none;
   min-height: 58px;
   padding-left: 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.feedback__present-input {
+  background-color: @input-color;
+  border: none;
+  min-height: 58px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 20px;
 }
 
 .feedback__present-input[placeholder],
 .feedback__contacts-input[placeholder],
 .feedback__description[placeholder] {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 }
 
 .feedback__contacts-item {
   text-align: left;
-  margin-right: 15px;
-}
-
-.feedback__contacts-input {
-  width: 100%;
-  margin: 0;
-}
-
-.feedback__contacts-title {
-  margin-left: 20px;
 }
 
 .feedback__impression-title,
 .feedback__landmarks-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   padding-left: 20px;
@@ -79,7 +85,8 @@
   box-sizing: border-box;
   background-color: @input-color;
   border: none;
-  min-width: 280px;
+  width: 100%;
+  max-width: 960px;
   min-height: 160px;
 }
 
@@ -93,10 +100,128 @@
   text-transform: @uppercase;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   background-color: @main-color-btn;
   padding: 10px 30px;
-  margin-left: 20px;
+  min-width: 280px;
+}
+
+.feedback__send-notice {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback {
+    flex-flow: row;
+    flex-wrap: wrap;
+  }
+
+  .feedback__item {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+
+  .feedback__title {
+    font-size: 21px;
+    max-width: 285px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .feedback__item:nth-child(3) .feedback__title,
+  .feedback__item:nth-child(1) .feedback__title {
+    padding: 0;
+    text-align: left;
+  }
+
+  .feedback__item:nth-child(3),
+  .feedback__item:nth-child(1) {
+    width: 50%;
+  }
+
+  .feedback__item:nth-child(2),
+  .feedback__item:nth-child(4),
+  .feedback__item:nth-child(5) {
+    border-top: 1px solid rgb(219, 219, 219);
+  }
+
+  .feedback__item:nth-child(1) {
+    border-left: 1px solid rgb(219, 219, 219);
+    box-sizing: border-box;
+    padding-left: 57px;
+  }
+
+  .feedback__item:nth-child(3) {
+    order: -1;
+    box-sizing: border-box;
+  }
+
+  .feedback__item:nth-child(3) .feedback__impression-item {
+    padding-top: 42px;
+  }
+
+  .feedback__item:nth-child(4) .feedback__list {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 95px;
+    padding-right: 95px;
+  }
+
+  .feedback__landmarks-item {
+    width: 50%;
+  }
+
+  .feedback__send-notice {
+    display: block;
+  }
+
+  .feadback__send-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .feedback__send-btn {
+    width: 325px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .feedback__landmarks-item {
+    width: 25%;
+  }
+
+  .feedback__item:nth-child(2) .feedback__list {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  .feedback__contacts-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .feedback__contacts-title--desktop-hiden {
+    display: none;
+  }
+
+  .feedback__contacts-input {
+    width: 320px;
+  }
+
+  .feedback__contacts-title {
+    padding: 0;
+    margin-right: 10px;
+  }
 }

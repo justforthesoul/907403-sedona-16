@@ -9,8 +9,32 @@
   overflow: hidden;
 }
 
+.content-wraper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
-  width: 320px;
+  min-width: 320px;
   margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .content-wraper {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    background-color: rgb(242, 242, 242);
+  }
+
+  .content-wraper {
+    max-width: 1200px;
+    box-shadow: 0 0 30px rgb(180, 180, 180);
+    background-color: rgb(255, 255, 255);
+  }
 }

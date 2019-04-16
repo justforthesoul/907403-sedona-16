@@ -1,7 +1,5 @@
 .features__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  .list-reset;
   text-align: left;
 }
 
@@ -13,4 +11,16 @@
 .features__description {
   font-size: 14px;
   line-height: 21px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .features__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .features__item:nth-child(2) {
+    order: 1;
+  }
 }

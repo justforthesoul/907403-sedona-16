@@ -1,7 +1,50 @@
+.form {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .form__title {
+  text-transform: @uppercase;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.form__subtitle {
   text-transform: @uppercase;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 960px;
+  }
+
+  .form-wraper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .form__title {
+    font-size: 30px;
+  }
+
+  .form__subtitle {
+    width: 445px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
