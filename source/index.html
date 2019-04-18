@@ -16,26 +16,24 @@
             type="button"
             aria-label="Закрыть меню"
           ></button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">Главнaя</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="photo.html">Фото и видео</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="form.html">Форма отзыва</a>
-              </li>
-              <li class="site-list__item">
-                <a
-                  class="site-list__link"
-                  href="https://htmlacademy.ru/intensive/adaptive"
-                  >Html academy</a
-                >
-              </li>
-            </ul>
-          </div>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">Главнaя</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a
+                class="site-list__link"
+                href="https://htmlacademy.ru/intensive/adaptive"
+                >Html academy</a
+              >
+            </li>
+          </ul>
         </nav>
         <button
           class="toggler toggler--open"
@@ -84,22 +82,31 @@
             <li class="advantages__item features">
               <ul class="features__list">
                 <li class="features__item">
-                  <h3 class="features__header">Жильё</h3>
-                  <p class="features__description">
-                    Рекомендуем пожить в настоящем мотеле, все как в кино!
-                  </p>
+                  <div class="features__icon-wraper"></div>
+                  <div class="features__text">
+                    <h3 class="features__header">Жильё</h3>
+                    <p class="features__description">
+                      Рекомендуем пожить в настоящем мотеле, все как в кино!
+                    </p>
+                  </div>
                 </li>
                 <li class="features__item">
-                  <h3 class="features__header">Сувениры</h3>
-                  <p class="features__description">
-                    Не только китайского, но и местного производства!
-                  </p>
+                  <div class="features__icon-wraper"></div>
+                  <div class="features__text">
+                    <h3 class="features__header">Сувениры</h3>
+                    <p class="features__description">
+                      Не только китайского, но и местного производства!
+                    </p>
+                  </div>
                 </li>
                 <li class="features__item">
-                  <h3 class="features__header">Еда</h3>
-                  <p class="features__description">
-                    Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-                  </p>
+                  <div class="features__icon-wraper"></div>
+                  <div class="features__text">
+                    <h3 class="features__header">Еда</h3>
+                    <p class="features__description">
+                      Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                    </p>
+                  </div>
                 </li>
               </ul>
             </li>
@@ -113,35 +120,35 @@
               </div>
               <div class="advantages__image-bridge"></div>
             </li>
-            <div class="advantages__item-wrapper">
-              <li class="advantages__item advantages__item--brief">
-                <div class="advantages__text">
-                  <h3 class="advantages__header">Небольшая площадь</h3>
-                  <p class="advantages__number">- №3 -</p>
-                  <p class="advantages__description">
-                    Все интересные места находятся очень близко
-                  </p>
-                </div>
-              </li>
-              <li class="advantages__item advantages__item--brief">
-                <div class="advantages__text">
-                  <h3 class="advantages__header">Красивая дорога</h3>
-                  <p class="advantages__number">- №4 -</p>
-                  <p class="advantages__description">
-                    Ехать в Седону из Лас-Вегаса совсем не скучно!
-                  </p>
-                </div>
-              </li>
-              <li class="advantages__item advantages__item--brief">
-                <div class="advantages__text">
-                  <h3 class="advantages__header">Мало туристов</h3>
-                  <p class="advantages__number">- №5 -</p>
-                  <p class="advantages__description">
-                    Большинство едет в гранд каньон и толпится там
-                  </p>
-                </div>
-              </li>
-            </div>
+          </ul>
+          <ul class="advantages__list advantages__list--brief">
+            <li class="advantages__item advantages__item--brief">
+              <div class="advantages__text">
+                <h3 class="advantages__header">Небольшая площадь</h3>
+                <p class="advantages__number">- №3 -</p>
+                <p class="advantages__description">
+                  Все интересные места находятся очень близко
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item--brief">
+              <div class="advantages__text">
+                <h3 class="advantages__header">Красивая дорога</h3>
+                <p class="advantages__number">- №4 -</p>
+                <p class="advantages__description">
+                  Ехать в Седону из Лас-Вегаса совсем не скучно!
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item advantages__item--brief">
+              <div class="advantages__text">
+                <h3 class="advantages__header">Мало туристов</h3>
+                <p class="advantages__number">- №5 -</p>
+                <p class="advantages__description">
+                  Большинство едет в гранд каньон и толпится там
+                </p>
+              </div>
+            </li>
           </ul>
         </section>
         <div class="common">
@@ -165,7 +172,6 @@
               class="footer__link footer__link--twitter"
               href="#"
               aria-label="Твитер"
-              href="#"
             ></a>
           </li>
           <li class="footer__social-item">
@@ -173,7 +179,6 @@
               class="footer__link footer__link--facebook"
               href="#"
               aria-label="Фэйсбук"
-              href="#"
             ></a>
           </li>
           <li class="footer__social-item">
@@ -181,7 +186,6 @@
               class="footer__link footer__link--youtube"
               href="#"
               aria-label="Ютуб"
-              href="#"
             ></a>
           </li>
         </ul>

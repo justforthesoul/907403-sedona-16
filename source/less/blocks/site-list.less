@@ -11,6 +11,18 @@
   padding-top: 8px;
   box-sizing: border-box;
   text-align: center;
+
+  &:hover {
+    background-color: @main-color-btn-hover;
+  }
+
+  &:active {
+    background-color: @main-color-btn-active;
+
+    .site-list__link {
+      color: rgb(136, 182, 209);
+    }
+  }
 }
 
 .site-list__link {
@@ -41,6 +53,18 @@
 
   .site-list__item {
     background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+
+      .site-list__link {
+        color: rgb(178, 178, 178);
+      }
+    }
   }
 
   .site-list__item:nth-child(2) {
@@ -63,9 +87,17 @@
     box-shadow: none;
   }
 
-  .site-list__link {
+  .site-list__item .site-list__link {
     color: rgb(0, 0, 0);
     font-size: 14px;
     line-height: 26px;
+
+    &:hover {
+      color: rgb(129, 179, 210);
+    }
+
+    &:active {
+      color: rgb(178, 178, 178);
+    }
   }
 }

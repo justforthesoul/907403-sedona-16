@@ -22,6 +22,14 @@
   width: 46px;
   height: 48px;
   background-color: @main-color-btn;
+
+  &:hover {
+    background-color: @main-color-btn-hover;
+  }
+
+  &:active {
+    background-color: @main-color-btn-active;
+  }
 }
 
 .footer__link {
@@ -31,24 +39,36 @@
 }
 
 .footer__link--twitter {
-  background-image: url("../../source/img/icon-twitter.svg");
+  background-image: url("../img/icon-twitter.svg");
   background-repeat: no-repeat;
   margin-left: 15px;
   margin-top: 15px;
+
+  &:active {
+    background-image: url("../img/icon-twitter-active.svg");
+  }
 }
 
 .footer__link--facebook {
-  background-image: url("../../source/img/icon-facebook.svg");
+  background-image: url("../img/icon-facebook.svg");
   background-repeat: no-repeat;
   margin-left: 18px;
   margin-top: 15px;
+
+  &:active {
+    background-image: url("../img/icon-facebook-active.svg");
+  }
 }
 
 .footer__link--youtube {
-  background-image: url("../../source/img/icon-youtube.svg");
+  background-image: url("../img/icon-youtube.svg");
   background-repeat: no-repeat;
   margin-left: 13px;
   margin-top: 18px;
+
+  &:active {
+    background-image: url("../img/icon-youtube-active.svg");
+  }
 }
 
 .footer__developed {
@@ -64,10 +84,18 @@
 }
 
 .footer__developed-link {
-  background-image: url("../../source/img/htmlacademy.svg");
+  background-image: url("../img/htmlacademy.svg");
   background-repeat: no-repeat;
   width: 35px;
   height: 35px;
+
+  &:hover {
+    background-image: url("../img/htmlacademy-hover.svg");
+  }
+
+  &:active {
+    background-image: url("../img/htmlacademy-active.svg");
+  }
 }
 
 @media (min-width: @tablet-width) {
