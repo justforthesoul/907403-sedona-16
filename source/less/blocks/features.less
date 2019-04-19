@@ -2,8 +2,11 @@
   .list-reset;
   text-align: left;
   display: flex;
+  justify-content: space-around;
   flex-flow: column;
   width: 100%;
+  min-height: 416px;
+  padding-left: 25px;
 }
 
 .features__header {
@@ -14,6 +17,7 @@
 .features__description {
   font-size: 14px;
   line-height: 21px;
+  width: 210px;
 }
 
 .features__item {
@@ -25,28 +29,25 @@
 .features__icon-wraper {
   width: 37px;
   height: 37px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-right: 10px;
 }
 
 .features__item:nth-child(1) .features__icon-wraper {
   background-image: url("../img/icon-house.svg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: contain;
 }
 
 .features__item:nth-child(2) .features__icon-wraper {
   background-image: url("../img/icon-gift.svg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: contain;
 }
 
 .features__item:nth-child(3) .features__icon-wraper {
   background-image: url("../img/icon-burger.svg");
   background-repeat: no-repeat;
-  background-position: center;
   background-size: contain;
 }
 
@@ -63,24 +64,39 @@
     width: 165px;
   }
 
+  .features__description {
+    width: 165px;
+  }
+
   .features__header {
     font-size: 21px;
+    margin-top: -15px;
   }
 
   .features__list {
     flex-flow: row;
-    justify-content: space-around;
+    min-height: 330px;
+    padding-left: 0;
   }
 
   .features__icon-wraper {
     width: 76px;
     height: 76px;
     margin-right: 0;
+    margin-top: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features__item {
-    width: 285px;
+    text-align: center;
+  }
+
+  .features__description {
+    width: 288px;
+  }
+
+  .features__description:nth-child(2) {
+    width: 220px;
   }
 }

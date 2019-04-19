@@ -1,26 +1,36 @@
 .common {
   text-transform: @uppercase;
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+  height: 288px;
 }
 
 .common__title {
   font-size: 21px;
   line-height: 26px;
+  padding-top: 32px;
 }
 
 .common__description {
   font-size: 14px;
   line-height: 24px;
+  width: 262px;
 }
 
 .common__button {
+  margin-top: 30px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 21px;
   line-height: 26px;
   background-color: @main-color-btn;
-  padding: 10px 30px;
   box-sizing: border-box;
+  width: 280px;
+  height: 58px;
+  padding-top: 17px;
 
   &:hover {
     background-color: @main-color-btn-hover;
@@ -29,5 +39,24 @@
   &:active {
     background-color: @main-color-btn-active;
     color: rgb(136, 182, 209);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .common {
+    height: 318px;
+  }
+
+  .common__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .common__description {
+    width: 440px;
+  }
+
+  .common__button {
+    width: 458px;
   }
 }

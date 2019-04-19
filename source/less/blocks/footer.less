@@ -1,5 +1,7 @@
 .footer {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
   margin: 0 auto;
 }
 
@@ -14,8 +16,7 @@
   .list-reset;
   display: flex;
   justify-content: space-around;
-  margin-left: 75px;
-  margin-right: 75px;
+  width: 151px;
 }
 
 .footer__social-item {
@@ -102,17 +103,14 @@
   .footer {
     width: 650px;
     min-height: 120px;
-    display: flex;
     flex-flow: row;
     justify-content: space-between;
-    align-items: center;
   }
 
   .footer__social-list {
     width: 151px;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .footer {

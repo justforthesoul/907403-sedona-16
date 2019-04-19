@@ -42,14 +42,23 @@
           type="button"
           aria-label="Открыть меню"
         ></button>
-        <a class="page-header__logo" href="#">
-          <img
-            class="page-header__logo-image"
-            src="img/logo-sedona-mobile.svg"
-            alt="Логотип Седона"
-            width="102"
-            height="83"
-          />
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source
+              media="(min-width: 1280px)"
+              srcset="img/logo-sedona-desktop.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="img/logo-sedona-tablet.svg"
+            />
+            <img
+              src="img/logo-sedona-mobile.svg"
+              alt="Логотип Седона"
+              width="188"
+              height="97"
+            />
+          </picture>
         </a>
         <div class="page-header__image-minor">
           <img
@@ -125,7 +134,10 @@
               <ul class="feedback__list">
                 <li class="feedback__contacts-item">
                   <label class="feedback__contacts-title" for="phone">
-                    <span class="feedback__contacts-title--desktop-hiden">Контактный</span> телефон*:
+                    <span class="feedback__contacts-title--desktop-hiden"
+                      >Контактный</span
+                    >
+                    телефон*:
                   </label>
                   <input
                     class="feedback__contacts-input feedback__contacts-input--phone"

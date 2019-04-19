@@ -45,7 +45,7 @@
 .feedback__contacts-input,
 .feedback__present-input {
   background-color: @input-color;
-  border: 5px solid @input-color;
+  border: 5px solid transparent;
   min-height: 58px;
   padding-left: 20px;
   box-sizing: border-box;
@@ -89,10 +89,10 @@
 .feedback__description {
   box-sizing: border-box;
   background-color: @input-color;
-  border: 5px solid @input-color;
   width: 100%;
   max-width: 960px;
   min-height: 160px;
+  border: 5px solid transparent;
 
   &:hover {
     background-color: @input-color-hover;
@@ -240,15 +240,15 @@
 }
 
 .feedback__contacts-input--phone {
-  background-image: url("../img/icon-phone.svg");
+  background-image: url("../img/icon-phone.png");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: right;
 }
 
 .feedback__contacts-input--email {
-  background-image: url("../img/icon-mail.svg");
+  background-image: url("../img/icon-mail.png");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: right;
 }
 
 @media (min-width: @tablet-width) {

@@ -4,12 +4,13 @@
   line-height: 24px;
   text-align: center;
   font-weight: 300;
+  margin: 0 auto;
 }
 
 .photo-gallery__list {
   .list-reset;
-  display: flex;
-  flex-flow: column;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .photo-gallery__item {
@@ -17,6 +18,7 @@
   width: 100%;
   border-top: 1px solid rgb(229, 229, 229);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .photo-gallery__item:last-child {
@@ -41,13 +43,38 @@
 
 .photo-gallery__likes-number {
   font-weight: 700;
+  padding-left: 37px;
+  position: relative;
+}
+
+.photo-gallery__likes-number::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon-like.svg");
+  background-repeat: no-repeat;
+  left: 0;
+}
+
+.photo-gallery__image {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: @tablet-width) {
-  .photo-gallery {
+  .photo-gallery__list {
+    padding-left: 60px;
+    padding-right: 60px;
     display: flex;
-    flex-flow: column;
-    align-items: center;
+    flex-flow: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .photo-gallery__likes {
@@ -69,32 +96,38 @@
     width: 440px;
   }
 
-  .photo-gallery__list {
-    flex-flow: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-
   .photo-gallery__item {
     border: none;
     padding: 0;
     margin: 0;
     width: 50%;
+    position: relative;
+    display: inline-block;
   }
 
   .photo-gallery__item:nth-child(1) {
     width: 100%;
+  }
+
+  .photo-gallery__item:last-child {
+    border-bottom: none;
+  }
+
+  .photo-gallery__image {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .photo-gallery__item {
-    width: 33%;
-    position: relative;
+  .photo-gallery__list {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .photo-gallery__item:nth-child(1) {
-    width: 100%;
+  .photo-gallery__item {
+    width: 400px;
+    position: relative;
   }
 
   .photo-gallery__item:nth-child(3) .photo-gallery__text {
@@ -103,10 +136,19 @@
 
   .photo-gallery__text {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    bottom: 4px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
     color: rgb(255, 255, 255);
     width: 100%;
     height: 80px;
+  }
+
+  .photo-gallery__image {
+    margin-bottom: -4px;
+  }
+
+  .photo-gallery__likes-number::before {
+    background-image: url("../img/icon-like-desktop.svg");
   }
 }
