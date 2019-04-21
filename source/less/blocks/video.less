@@ -6,6 +6,7 @@
 .video__title {
   font-size: 18px;
   line-height: 26px;
+  padding-top: 10px;
 }
 
 .video__description {
@@ -14,4 +15,21 @@
   font-weight: 300;
   width: 240px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .video__title {
+    font-size: 30px;
+    padding-top: 55px;
+  }
+
+  .video__description {
+    width: 420px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .video__title {
+    padding-top: 60px;
+  }
 }

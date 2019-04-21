@@ -1,8 +1,5 @@
 .footer {
-  display: flex;
-  align-items: center;
-  flex-flow: column;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .footer__hashtag {
@@ -10,13 +7,16 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  padding-top: 10px;
 }
 
 .footer__social-list {
   .list-reset;
   display: flex;
   justify-content: space-around;
-  width: 151px;
+  width: 157px;
+  margin: 0 auto;
+  padding-top: 15px;
 }
 
 .footer__social-item {
@@ -42,8 +42,8 @@
 .footer__link--twitter {
   background-image: url("../img/icon-twitter.svg");
   background-repeat: no-repeat;
-  margin-left: 15px;
-  margin-top: 15px;
+  margin-left: 14px;
+  margin-top: 16px;
 
   &:active {
     background-image: url("../img/icon-twitter-active.svg");
@@ -54,7 +54,7 @@
   background-image: url("../img/icon-facebook.svg");
   background-repeat: no-repeat;
   margin-left: 18px;
-  margin-top: 15px;
+  margin-top: 14px;
 
   &:active {
     background-image: url("../img/icon-facebook-active.svg");
@@ -65,7 +65,7 @@
   background-image: url("../img/icon-youtube.svg");
   background-repeat: no-repeat;
   margin-left: 13px;
-  margin-top: 18px;
+  margin-top: 17px;
 
   &:active {
     background-image: url("../img/icon-youtube-active.svg");
@@ -76,6 +76,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+  padding-left: 5px;
 }
 
 .footer__developed-text {
@@ -87,8 +89,9 @@
 .footer__developed-link {
   background-image: url("../img/htmlacademy.svg");
   background-repeat: no-repeat;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
 
   &:hover {
     background-image: url("../img/htmlacademy-hover.svg");
@@ -101,19 +104,34 @@
 
 @media (min-width: @tablet-width) {
   .footer {
-    width: 650px;
-    min-height: 120px;
+    width: 660px;
+    height: 120px;
+    display: flex;
     flex-flow: row;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -6px;
+    box-sizing: border-box;
   }
 
-  .footer__social-list {
-    width: 151px;
+  .footer__hashtag,
+  .footer__social-list,
+  .footer__developed {
+    padding-top: 0;
+  }
+
+  .footer__hashtag {
+    padding-left: 8px;
+  }
+
+  .footer__developed-text {
+    margin-right: -4px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer {
-    width: 965px;
+    width: 960px;
   }
 }

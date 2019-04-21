@@ -1,8 +1,28 @@
 .map {
   margin-top: 50px;
+  position: relative;
+}
+
+.map::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  width: 27px;
+  height: 27px;
+  background-image: url("../../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  left: calc(50% - 27px / 2);
+  top: calc(50% - 27px / 2);
 }
 
 .map__image {
   width: 100%;
   height: auto;
+}
+
+@media (min-width: @tablet-width) {
+  .map__image {
+    min-height: 350px;
+  }
 }
