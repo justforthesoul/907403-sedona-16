@@ -1,16 +1,22 @@
 .common {
   text-transform: @uppercase;
-  text-align: center;
+  display: flex;
+  flex-flow: column;
 }
 
 .common__title {
   font-size: 21px;
   line-height: 26px;
+  margin: 0;
+  padding-top: 15px;
 }
 
 .common__description {
   font-size: 14px;
   line-height: 24px;
+  padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .common__button {
@@ -19,6 +25,53 @@
   font-size: 21px;
   line-height: 26px;
   background-color: @main-color-btn;
-  padding: 10px 30px;
   box-sizing: border-box;
+  width: 280px;
+  margin: 0 auto;
+  margin-top: 20px;
+  height: 58px;
+  padding-top: 17px;
+
+  &:hover {
+    background-color: @main-color-btn-hover;
+  }
+
+  &:active {
+    background-color: @main-color-btn-active;
+    color: rgb(136, 182, 209);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .common__title {
+    font-size: 30px;
+    line-height: 26px;
+    padding-top: 56px;
+  }
+
+  .common__description {
+    padding-top: 16px;
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  .common__button {
+    width: 458px;
+    margin-top: 27px;
+    margin-bottom: 8px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .common__description {
+    padding-top: 17px;
+    padding-left: 370px;
+    padding-right: 370px;
+  }
+
+  .common__button {
+    margin-top: 32px;
+    margin-bottom: 17px;
+  }
 }

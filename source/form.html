@@ -8,56 +8,72 @@
   </head>
 
   <body>
+    <svg class="display-none">
+      <symbol viewBox="0 0 60 60" id="icon-htmlacademy">
+        <title>icon-htmlacademy</title>
+        <path
+          d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"
+        />
+      </symbol>
+    </svg>
     <div class="content-wraper">
       <header class="page-header">
         <nav class="main-nav">
           <button
-            class="toggler toggler--close"
+            class="main-nav__button main-nav__button--closed"
             type="button"
             aria-label="Закрыть меню"
           ></button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__link" href="index.html">Главнaя</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="photo.html">Фото и видео</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="#">Форма отзыва</a>
-              </li>
-              <li class="site-list__item">
-                <a
-                  class="site-list__link"
-                  href="https://htmlacademy.ru/intensive/adaptive"
-                  >Html academy</a
-                >
-              </li>
-            </ul>
-          </div>
+          <button
+            class="main-nav__button main-nav__button--open"
+            type="button"
+            aria-label="Открыть меню"
+          ></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главнaя</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a
+                class="main-nav__link"
+                href="https://htmlacademy.ru/intensive/adaptive"
+                >Html academy</a
+              >
+            </li>
+          </ul>
+          <a class="main-nav__logo" href="index.html">
+            <picture>
+              <source
+                media="(min-width: 1280px)"
+                srcset="img/logo-sedona-desktop.svg"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/logo-sedona-tablet.svg"
+              />
+              <img
+                class="main-nav__logo-img"
+                src="img/logo-sedona-mobile.svg"
+                alt="Логотип Седона"
+                width="102"
+                height="83"
+              />
+            </picture>
+          </a>
         </nav>
-        <button
-          class="toggler toggler--open"
-          type="button"
-          aria-label="Открыть меню"
-        ></button>
-        <a class="page-header__logo" href="#">
-          <img
-            class="page-header__logo-image"
-            src="img/logo-sedona-mobile.svg"
-            alt="Логотип Седона"
-            width="102"
-            height="83"
-          />
-        </a>
-        <div class="page-header__image-minor">
+        <div class="page-header__image page-header__image-minor">
           <img
             class="page-header__picture-minor"
             src="img/text-sedona.svg"
             alt="Главное фото"
-            width="230"
-            height="40"
+            width="229"
+            height="38"
           />
         </div>
       </header>
@@ -125,10 +141,13 @@
               <ul class="feedback__list">
                 <li class="feedback__contacts-item">
                   <label class="feedback__contacts-title" for="phone">
-                    <span class="feedback__contacts-title--desktop-hiden">Контактный</span> телефон*:
+                    <span class="feedback__contacts-title--desktop-hiden"
+                      >Контактный</span
+                    >
+                    телефон*:
                   </label>
                   <input
-                    class="feedback__contacts-input"
+                    class="feedback__contacts-input feedback__contacts-input--phone"
                     type="tel"
                     name="phone"
                     id="phone"
@@ -140,7 +159,7 @@
                     Электронная&nbsp;почта*:
                   </label>
                   <input
-                    class="feedback__contacts-input"
+                    class="feedback__contacts-input feedback__contacts-input--email"
                     type="email"
                     name="email"
                     id="email"
@@ -158,7 +177,7 @@
                   <input
                     class="feedback__impression-input"
                     type="radio"
-                    name="positive"
+                    name="impression"
                     id="positive"
                     checked
                   />
@@ -170,7 +189,7 @@
                   <input
                     class="feedback__impression-input"
                     type="radio"
-                    name="negative"
+                    name="impression"
                     id="negative"
                   />
                   <label class="feedback__impression-title" for="negative">
@@ -181,7 +200,7 @@
                   <input
                     class="feedback__impression-input"
                     type="radio"
-                    name="difficult"
+                    name="impression"
                     id="difficult"
                   />
                   <label class="feedback__impression-title" for="difficult">
@@ -216,7 +235,7 @@
                     checked
                   />
                   <label class="feedback__landmarks-title" for="check2">
-                    Слайд-парк
+                    Гора-Колокол
                   </label>
                 </li>
                 <li class="feedback__landmarks-item">
@@ -225,9 +244,10 @@
                     type="checkbox"
                     name="check3"
                     id="check3"
+                    checked
                   />
                   <label class="feedback__landmarks-title" for="check3">
-                    Гора-Колокол
+                    Слайд-парк
                   </label>
                 </li>
                 <li class="feedback__landmarks-item">
@@ -236,7 +256,6 @@
                     type="checkbox"
                     name="check4"
                     id="check4"
-                    checked
                   />
                   <label class="feedback__landmarks-title" for="check4">
                     Красные скалы
@@ -248,11 +267,13 @@
               <legend class="feedback__title">
                 Опишите свои эмоции:
               </legend>
-              <textarea
-                class="feedback__description"
-                name="description"
-                placeholder="Опишите подробно все свои восторги"
-              ></textarea>
+              <div class="feedback__description-wraper">
+                <textarea
+                  class="feedback__description"
+                  name="description"
+                  placeholder="Опишите подробно все свои восторги"
+                ></textarea>
+              </div>
             </fieldset>
             <fieldset class="feedback__item">
               <legend class="visually-hidden">
@@ -279,7 +300,6 @@
               class="footer__link footer__link--twitter"
               href="#"
               aria-label="Твитер"
-              href="#"
             ></a>
           </li>
           <li class="footer__social-item">
@@ -287,7 +307,6 @@
               class="footer__link footer__link--facebook"
               href="#"
               aria-label="Фэйсбук"
-              href="#"
             ></a>
           </li>
           <li class="footer__social-item">
@@ -295,7 +314,6 @@
               class="footer__link footer__link--youtube"
               href="#"
               aria-label="Ютуб"
-              href="#"
             ></a>
           </li>
         </ul>
@@ -305,7 +323,13 @@
             class="footer__developed-link"
             aria-label="htmlacademy.ru"
             href="https://htmlacademy.ru/intensive/adaptive"
-          ></a>
+            ><svg width="41" height="41">
+              <use
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xlink:href="#icon-htmlacademy"
+              ></use>
+            </svg>
+          </a>
         </div>
       </footer>
     </div>

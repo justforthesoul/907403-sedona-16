@@ -1,22 +1,15 @@
-.photo-gallery__title {
-  text-transform: @uppercase;
-  font-size: 14px;
-  line-height: 24px;
-  text-align: center;
-  font-weight: 300;
-}
-
 .photo-gallery__list {
   .list-reset;
-  display: flex;
-  flex-flow: column;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .photo-gallery__item {
-  padding-top: 24px;
+  padding-top: 22px;
   width: 100%;
   border-top: 1px solid rgb(229, 229, 229);
   text-align: center;
+  box-sizing: border-box;
 }
 
 .photo-gallery__item:last-child {
@@ -28,51 +21,70 @@
   padding: 0;
 }
 
-.photo-gallery__text {
-  font-size: 14px;
-  line-height: 24px;
+.photo-gallery__discription {
   padding-left: 20px;
   text-align: left;
 }
 
 .photo-gallery__header {
   text-transform: @uppercase;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  padding-top: 12px;
+}
+
+.photo-gallery__autor {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .photo-gallery__likes-number {
+  font-size: 14px;
+  line-height: 24px;
   font-weight: 700;
+  margin: 0;
+  text-align: left;
+  padding-left: 56px;
+  padding-top: 9px;
+  padding-bottom: 15px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    left: 20px;
+    top: 6px;
+  }
+}
+
+.photo-gallery__image {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media (min-width: @tablet-width) {
-  .photo-gallery {
+  .photo-gallery__list {
+    padding-left: 60px;
+    padding-right: 60px;
     display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
-
-  .photo-gallery__likes {
-    padding-right: 20px;
-  }
-
-  .photo-gallery__text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(242, 242, 242);
+    flex-flow: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .photo-gallery__item:nth-child(3) .photo-gallery__text {
     background-color: rgb(234, 234, 234);
-  }
-
-  .photo-gallery__title {
-    width: 440px;
-  }
-
-  .photo-gallery__list {
-    flex-flow: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
   }
 
   .photo-gallery__item {
@@ -80,16 +92,6 @@
     padding: 0;
     margin: 0;
     width: 50%;
-  }
-
-  .photo-gallery__item:nth-child(1) {
-    width: 100%;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .photo-gallery__item {
-    width: 33%;
     position: relative;
   }
 
@@ -97,16 +99,89 @@
     width: 100%;
   }
 
-  .photo-gallery__item:nth-child(3) .photo-gallery__text {
-    background-color: rgba(0, 0, 0, 0.5);
+  .photo-gallery__item:last-child {
+    border-bottom: none;
+  }
+
+  .photo-gallery__image {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .photo-gallery__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(242, 242, 242);
+    margin-top: -4px;
+  }
+
+  .photo-gallery__header {
+    text-transform: @uppercase;
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 0;
+  }
+
+  .photo-gallery__likes-number {
+    padding-right: 20px;
+    padding-top: 29px;
+    padding-bottom: 27px;
+
+    &::before {
+      content: "";
+      left: 24px;
+      top: 28px;
+    }
+  }
+
+  .photo-gallery__item:nth-child(2),
+  .photo-gallery__item:nth-child(3),
+  .photo-gallery__item:nth-child(4) {
+    .photo-gallery__likes-number {
+      padding-right: 30px;
+    }
+  }
+
+  .photo-gallery__item:nth-child(3) {
+    .photo-gallery__likes-number {
+      padding-right: 35px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-gallery__list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .photo-gallery__item {
+    width: 400px;
+    position: relative;
+  }
+
+  .photo-gallery__item:nth-child(3) .photo-gallery__text {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .photo-gallery__item .photo-gallery__text {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    bottom: 4px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    margin-top: 0;
     color: rgb(255, 255, 255);
     width: 100%;
     height: 80px;
+  }
+
+  .photo-gallery__image {
+    margin-bottom: -4px;
+  }
+
+  .photo-gallery__likes-number::before {
+    background-image: url("../img/icon-like-desktop.svg");
   }
 }
