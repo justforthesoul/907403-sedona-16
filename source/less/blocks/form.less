@@ -1,23 +1,24 @@
 .form {
   margin: 0 auto;
+  text-align: center;
 }
 
 .form__title {
+  margin: 0;
   text-transform: @uppercase;
   font-size: 18px;
   line-height: 26px;
-  text-align: center;
-  padding-top: 20px;
+  padding-top: 37px;
 }
 
 .form__subtitle {
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 15px;
   text-transform: @uppercase;
   font-size: 14px;
   line-height: 24px;
-  text-align: center;
   font-weight: 300;
-  width: 280px;
-  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -27,18 +28,15 @@
     max-width: 960px;
   }
 
-  .form-wraper {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
-
   .form__title {
     font-size: 30px;
+    padding-top: 75px;
   }
 
   .form__subtitle {
-    width: 445px;
+    padding-left: 105px;
+    padding-right: 105px;
+    padding-top: 30px;
   }
 }
 
@@ -46,5 +44,14 @@
   .form {
     padding-left: 120px;
     padding-right: 120px;
+  }
+
+  .form__title {
+    padding-top: 110px;
+  }
+
+  .form__subtitle {
+    padding-left: 260px;
+    padding-right: 260px;
   }
 }
