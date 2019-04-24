@@ -14,9 +14,11 @@
   .list-reset;
   display: flex;
   justify-content: space-around;
-  width: 157px;
-  margin: 0 auto;
   padding-top: 15px;
+  padding-right: 80px;
+  padding-left: 80px;
+  max-width: 160px;
+  margin: 0 auto;
 }
 
 .footer__social-item {
@@ -46,7 +48,7 @@
   margin-top: 16px;
 
   &:active {
-    background-image: url("../img/icon-twitter-active.svg");
+    opacity: 0.3;
   }
 }
 
@@ -57,7 +59,7 @@
   margin-top: 14px;
 
   &:active {
-    background-image: url("../img/icon-facebook-active.svg");
+    opacity: 0.3;
   }
 }
 
@@ -68,14 +70,13 @@
   margin-top: 17px;
 
   &:active {
-    background-image: url("../img/icon-youtube-active.svg");
+    opacity: 0.3;
   }
 }
 
 .footer__developed {
   display: flex;
   justify-content: center;
-  align-items: center;
   padding-top: 30px;
   padding-left: 5px;
 }
@@ -87,51 +88,65 @@
 }
 
 .footer__developed-link {
-  background-image: url("../img/htmlacademy.svg");
-  background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
+  width: 42px;
+  height: 42px;
+  padding-top: 7px;
+  padding-left: 6px;
 
   &:hover {
-    background-image: url("../img/htmlacademy-hover.svg");
+    fill: rgb(129, 179, 210);
   }
 
   &:active {
-    background-image: url("../img/htmlacademy-active.svg");
+    fill: rgb(178, 178, 178);
   }
 }
 
 @media (min-width: @tablet-width) {
   .footer {
-    width: 660px;
-    height: 120px;
+    min-height: 120px;
     display: flex;
-    flex-flow: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: -6px;
-    box-sizing: border-box;
+    padding-left: 60px;
+    padding-right: 53px;
   }
 
   .footer__hashtag,
   .footer__social-list,
   .footer__developed {
-    padding-top: 0;
+    padding: 0;
+    margin: 0;
   }
 
   .footer__hashtag {
-    padding-left: 8px;
+    padding-top: 42px;
+  }
+
+  .footer__social-list {
+    padding-top: 33px;
+  }
+
+  .footer__social-item:nth-child(2),
+  .footer__social-item:nth-child(3) {
+    margin-left: 6px;
+  }
+
+  .footer__social-item:nth-child(3) {
+    margin-right: 6px;
+  }
+
+  .footer__developed {
+    padding-top: 29px;
   }
 
   .footer__developed-text {
-    margin-right: -4px;
+    margin-top: 15px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer {
-    width: 960px;
+    padding-left: 120px;
+    padding-right: 113px;
   }
 }

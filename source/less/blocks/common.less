@@ -1,28 +1,25 @@
 .common {
   text-transform: @uppercase;
-  text-align: center;
   display: flex;
   flex-flow: column;
-  align-items: center;
-  box-sizing: border-box;
 }
 
 .common__title {
   font-size: 21px;
   line-height: 26px;
   margin: 0;
-  padding-top: 26px;
+  padding-top: 15px;
 }
 
 .common__description {
   font-size: 14px;
   line-height: 24px;
-  width: 262px;
   padding-top: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .common__button {
-  margin-top: 22px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 21px;
@@ -30,6 +27,8 @@
   background-color: @main-color-btn;
   box-sizing: border-box;
   width: 280px;
+  margin: 0 auto;
+  margin-top: 20px;
   height: 58px;
   padding-top: 17px;
 
@@ -47,25 +46,32 @@
   .common__title {
     font-size: 30px;
     line-height: 26px;
-    padding-top: 62px;
+    padding-top: 56px;
   }
 
   .common__description {
-    width: 440px;
     padding-top: 16px;
+    padding-left: 160px;
+    padding-right: 160px;
   }
 
   .common__button {
     width: 458px;
     margin-top: 27px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 }
 
 
 @media (min-width: @desktop-width) {
+  .common__description {
+    padding-top: 17px;
+    padding-left: 370px;
+    padding-right: 370px;
+  }
+
   .common__button {
     margin-top: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
   }
 }
