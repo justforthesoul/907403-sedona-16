@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/picturefill.min.js" async></script>
   </head>
 
   <body>
@@ -20,15 +21,15 @@
       <header class="page-header">
         <nav class="main-nav">
           <button
-            class="main-nav__button main-nav__button--closed"
+            class="main-nav__button main-nav__button--closed visually-hidden"
             type="button"
             aria-label="Закрыть меню"
           ></button>
-          <button
+          <!--<button
             class="main-nav__button main-nav__button--open"
             type="button"
             aria-label="Открыть меню"
-          ></button>
+          ></button>-->
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главнaя</a>
@@ -118,6 +119,7 @@
                     name="surname"
                     id="surname"
                     placeholder="Иванов"
+                    required
                   />
                 </li>
                 <li class="feedback__present-item">
@@ -152,6 +154,8 @@
                     name="phone"
                     id="phone"
                     placeholder="Введите телефон"
+                    pattern="[0-9]{1}-[0-9]{3}-[0-9]{7}"
+                    required
                   />
                 </li>
                 <li class="feedback__contacts-item">
@@ -164,6 +168,8 @@
                     name="email"
                     id="email"
                     placeholder="Введите e-mail"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    required
                   />
                 </li>
               </ul>
@@ -333,5 +339,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/app.js"></script>
   </body>
 </html>
