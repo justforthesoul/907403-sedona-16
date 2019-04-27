@@ -23,13 +23,8 @@
           <button
             class="main-nav__button main-nav__button--closed visually-hidden"
             type="button"
-            aria-label="Закрыть меню"
+            aria-label="Открыть-Закрыть меню"
           ></button>
-          <!--<button
-            class="main-nav__button main-nav__button--open"
-            type="button"
-            aria-label="Открыть меню"
-          ></button>-->
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главнaя</a>
@@ -101,11 +96,12 @@
                     Имя*:
                   </label>
                   <input
-                    class="feedback__present-input"
+                    class="feedback__present-input feedback__present-input--firstname required"
                     type="text"
                     name="firstname"
                     id="firstname"
                     placeholder="Петр"
+                    pattern="[A-zА-я]{1,20}"
                     required
                   />
                 </li>
@@ -114,11 +110,12 @@
                     Фамилия*:
                   </label>
                   <input
-                    class="feedback__present-input"
+                    class="feedback__present-input feedback__present-input--surname required"
                     type="text"
                     name="surname"
                     id="surname"
                     placeholder="Иванов"
+                    pattern="[A-zА-я]{1,20}"
                     required
                   />
                 </li>
@@ -149,7 +146,7 @@
                     телефон*:
                   </label>
                   <input
-                    class="feedback__contacts-input feedback__contacts-input--phone"
+                    class="feedback__contacts-input feedback__contacts-input--phone required"
                     type="tel"
                     name="phone"
                     id="phone"
@@ -163,7 +160,7 @@
                     Электронная&nbsp;почта*:
                   </label>
                   <input
-                    class="feedback__contacts-input feedback__contacts-input--email"
+                    class="feedback__contacts-input feedback__contacts-input--email required"
                     type="email"
                     name="email"
                     id="email"
@@ -338,6 +335,20 @@
           </a>
         </div>
       </footer>
+    </div>
+    <div class="popup-failure visually-hidden">
+      <h2 class="popup-failure__header">Что-то пошло
+        не так!</h2>
+      <p class="popup-failure__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="popup-failure__button" type="button">Ок</button>
+    </div>
+    <div class="popup-succes visually-hidden">
+      <h2 class="popup-succes__header">Ваш отзыв отправлен!</h2>
+      <p class="popup-succes__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+        В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
+      <div  class="popup-succes__button-wraper">
+        <button class="popup-succes__button" type="button">Закрыть окно</button>
+      </div>
     </div>
     <script src="js/app.js"></script>
   </body>

@@ -23,13 +23,8 @@
           <button
             class="main-nav__button main-nav__button--closed visually-hidden"
             type="button"
-            aria-label="Закрыть меню"
+            aria-label="Открыть-Закрыть меню"
           ></button>
-          <!--<button
-            class="main-nav__button main-nav__button--open"
-            type="button"
-            aria-label="Открыть меню"
-          ></button>-->
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">Главнaя</a>
@@ -97,6 +92,30 @@
             </div>
             <picture class="advantages__picture">
               <source
+                type="image/webp"
+                media="(min-width: 1280px)"
+                srcset="
+                  img/main-city-desktop@1x.webp 1x,
+                  img/main-city-desktop@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="
+                  img/main-city-tablet@1x.webp 1x,
+                  img/main-city-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/main-city-mobile@1x.webp 1x,
+                  img/main-city-mobile@2x.webp 2x
+                "
+              />
+
+              <source
                 media="(min-width: 1280px)"
                 srcset="
                   img/main-city-desktop@1x.jpg 1x,
@@ -158,6 +177,30 @@
               </p>
             </div>
             <picture class="advantages__picture">
+                <source
+                type="image/webp"
+                media="(min-width: 1280px)"
+                srcset="
+                  img/main-bridge-desktop@1x.webp 1x,
+                  img/main-bridge-desktop@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="
+                  img/main-bridge-tablet@1x.webp 1x,
+                  img/main-bridge-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/main-bridge-mobile@1x.webp 1x,
+                  img/main-bridge-mobile@2x.webp 2x
+                "
+              />
+
               <source
                 media="(min-width: 1280px)"
                 srcset="
@@ -228,7 +271,6 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d592000.572689395!2d-112.25255789773834!3d34.947740018947336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1556139801479!5m2!1sru!2sru"
             width="320"
             height="350"
-            frameborder="0"
           ></iframe>
         </div>
       </main>
