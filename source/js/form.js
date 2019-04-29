@@ -34,8 +34,7 @@ window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (
-      !failureMessage.classList.contains("popup-failure--js") ||
-      !succesButton.classList.contains("popup-succes--js")
+      !failureMessage.classList.contains("popup-failure--js") || !succesButton.classList.contains("popup-succes--js")
     ) {
       failureMessage.classList.add("popup-failure--js");
       succesMessage.classList.add("popup-succes--js");
