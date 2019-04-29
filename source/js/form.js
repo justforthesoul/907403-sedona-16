@@ -8,7 +8,12 @@ var succesButton = document.querySelector(".popup-succes__button");
 
 sendBtn.addEventListener("click", function() {
   for (var i = 0; i < required.length; i++) {
-    if (required[0].value && required[1].value && required[2].value && required[3].value) {
+    if (
+      required[0].value &&
+      required[1].value &&
+      required[2].value &&
+      required[3].value
+    ) {
       succesMessage.classList.remove("popup-succes--js");
       if (!failureMessage.classList.contains("popup-failure--js")) {
         failureMessage.classList.add("popup-failure--js");
@@ -34,7 +39,8 @@ window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (
-      !failureMessage.classList.contains("popup-failure--js") || !succesButton.classList.contains("popup-succes--js")
+      !failureMessage.classList.contains("popup-failure--js") ||
+      !succesButton.classList.contains("popup-succes--js")
     ) {
       failureMessage.classList.add("popup-failure--js");
       succesMessage.classList.add("popup-succes--js");
