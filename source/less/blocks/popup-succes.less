@@ -11,6 +11,10 @@
   margin-left: -160px;
 }
 
+.popup-succes--js {
+  display: none;
+}
+
 .popup-succes__header {
   font-size: 18px;
   line-height: 26px;
@@ -55,6 +59,10 @@
   &:active {
     background-color: @main-color-btn-active;
     color: rgb(136, 182, 209);
+  }
+
+  &:disabled {
+    background-color: @main-color-btn-disabled;
   }
 }
 

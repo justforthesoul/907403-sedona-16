@@ -6,40 +6,39 @@ var required = form.querySelectorAll(".required");
 var failureButton = document.querySelector(".popup-failure__button");
 var succesButton = document.querySelector(".popup-succes__button");
 
-sendBtn.addEventListener("click", function(evt) {
-  evt.preventDefault();
+sendBtn.addEventListener("click", function() {
   for (var i = 0; i < required.length; i++) {
-    if (required[i].value) {
-      succesMessage.classList.remove("display-none");
-      if (!failureMessage.classList.contains("display-none")) {
-        failureMessage.classList.add("display-none");
+    if (required[0].value && required[1].value && required[2].value && required[3].value) {
+      succesMessage.classList.remove("popup-succes--js");
+      if (!failureMessage.classList.contains("popup-failure--js")) {
+        failureMessage.classList.add("popup-failure--js");
       }
     } else {
-      failureMessage.classList.remove("display-none");
-      if (!succesButton.classList.contains("display-none")) {
-        succesMessage.classList.add("display-none");
+      failureMessage.classList.remove("popup-failure--js");
+      if (!succesButton.classList.contains("popup-succes--js")) {
+        succesMessage.classList.add("popup-succes--js");
       }
     }
   }
 });
 
 failureButton.addEventListener("click", function() {
-  failureMessage.classList.add("display-none");
+  failureMessage.classList.add("popup-failure--js");
 });
 
 succesButton.addEventListener("click", function() {
-  succesMessage.classList.add("display-none");
+  succesMessage.classList.add("popup-succes--js");
 });
 
 window.addEventListener("keydown", function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (
-      !failureMessage.classList.contains("display-none") ||
-      !succesButton.classList.contains("display-none")
+      !failureMessage.classList.contains("popup-failure--js") ||
+      !succesButton.classList.contains("popup-succes--js")
     ) {
-      failureMessage.classList.add("display-none");
-      succesMessage.classList.add("display-none");
+      failureMessage.classList.add("popup-failure--js");
+      succesMessage.classList.add("popup-succes--js");
     }
   }
 });

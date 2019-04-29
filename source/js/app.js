@@ -1,7 +1,7 @@
 var buttonTogler = document.querySelector(".main-nav button");
 var navList = document.querySelector(".main-nav__list");
 
-buttonTogler.classList.remove("display-none");
+buttonTogler.classList.remove("main-nav__button--js");
 buttonTogler.classList.remove("main-nav__button--closed");
 navList.classList.add("main-nav__list--closed");
 

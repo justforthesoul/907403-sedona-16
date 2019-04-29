@@ -83,7 +83,8 @@ gulp.task("server", function() {
     server: "build/"
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/js/*.js", gulp.series("compress", "refresh"));
+  gulp.watch("source/less/**/*.less", gulp.series("css", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 

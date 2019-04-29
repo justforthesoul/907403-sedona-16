@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <svg class="display-none">
+    <svg style="display: none;">
       <symbol viewBox="0 0 60 60" id="icon-htmlacademy">
         <title>icon-htmlacademy</title>
         <path
@@ -23,7 +23,7 @@
       <header class="page-header">
         <nav class="main-nav">
           <button
-            class="main-nav__button main-nav__button--closed display-none"
+            class="main-nav__button main-nav__button--closed main-nav__button--js"
             type="button"
             aria-label="Открыть-Закрыть меню"
           ></button>
@@ -266,7 +266,11 @@
             и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в
             Седоне
           </p>
-          <a class="common__button" href="#">Найти гостиницу</a>
+          <a href="search.html" aria-label="Найти гостиницу"
+            ><button type="button" class="common__button">
+              Найти гостиницу
+            </button>
+          </a>
         </div>
         <div class="map">
           <iframe
