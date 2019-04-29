@@ -7,7 +7,7 @@
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/picturefill.min.js" async=""></script>
+    <script src="js/picturefill.js" async=""></script>
   </head>
 
   <body>
@@ -35,7 +35,7 @@
               <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">Html academy</a>
             </li>
           </ul>
-          <a class="main-nav__logo" href="index.html">
+          <a class="main-nav__logo" href="index.html" aria-label="Логотип - ссылка на главную страницу">
             <picture>
               <source media="(min-width: 1280px)" srcset="img/logo-sedona-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -52,7 +52,7 @@
         <h1 class="form__title">Оставьте свой отзыв</h1>
         <section class="form-wraper">
           <h2 class="form__subtitle">
-            Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+            Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а также о
             посещенных вами достопримечательностях
           </h2>
           <form class="form__section feedback" action="https://echo.htmlacademy.ru" method="post">
@@ -216,6 +216,7 @@
         <button class="popup-succes__button" type="button">Закрыть окно</button>
       </div>
     </div>
-    <script src="js/app.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
